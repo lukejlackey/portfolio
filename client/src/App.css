@@ -1,38 +1,111 @@
-.App {
-  text-align: center;
+/* ---Reset--- */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* ---Reset--- */
+
+/* ---Fonts--- */
+
+
+/* ---Fonts--- */
+
+/* ---Body--- */
+
+body {}
+
+/* ---Body--- */
+
+/* ---Headings--- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Tomorrow', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1 {
+    font-size: 4rem;
+    color: rgb(26, 1, 45);
+    transition: 0.1s ease-in-out;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+h1:hover {
+    font-size: 4.2rem;
+    color: rgb(86, 0, 151);
+    cursor: default;
 }
 
-.App-link {
-  color: #61dafb;
+/* ---Headings--- */
+
+/* ---Background--- */
+
+.bg {
+    width: 100vw;
+    height: 300vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* ---Background--- */
+
+/* ---Containers--- */
+
+.container {
+    width: 75vw;
+    text-align: justify;
+    background-color: rgba(0, 0, 0, 0.575);
+    color: rgb(198, 135, 0);
+    padding: 1rem;
+    border: .5rem solid rgb(41, 0, 72);
+    box-shadow: 0 0 0 1rem rgba(0, 0, 0, 0.575);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
 }
+
+/* ---Containers--- */
+
+/* ---NavBar--- */
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+nav>* {
+    text-align: center;
+}
+
+nav>a {
+    font-size: 1.2rem;
+    font-family: 'Tomorrow', sans-serif;
+    text-decoration: none;
+    color: rgb(41, 0, 72);
+    transition: 0.1s ease-in-out;
+    width: 25%;
+}
+
+nav>a:hover {
+    font-size: 1.3rem;
+    color: rgb(86, 0, 151);
+}
+
+/* ---NavBar--- */
+
+
+/* ---HomePage--- */
+
+#mainBg {
+    background-image: url('./assets/img/dunes.png');
+    background-size: cover;
+}
+
+/* ---HomePage--- */
