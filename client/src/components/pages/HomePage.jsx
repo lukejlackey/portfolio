@@ -2,13 +2,17 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Routes, Route } from "react-router-dom";
 import NavBar from '../NavBar';
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
-import TextBox from '../homePage/TextBox';
-import HeadingBox from '../homePage/HeadingBox';
-import MonkeyBox from '../homePage/MonkeyBox';
-import SkillsBox from '../homePage/SkillsBox';
 import bottomMonkey1 from '../../assets/img/monke2.png'
 import bottomMonkey2 from '../../assets/img/monke4.png'
 import ScrollDown from '../homePage/ScrollDown';
+import BgLayer from '../homePage/layers/BgLayer';
+import ArrowLayer2 from '../homePage/layers/ArrowLayer2';
+import MonkeySlider from '../homePage/layers/MonkeySlider';
+import AboutMe from '../homePage/layers/AboutMe';
+import Skills from '../homePage/layers/Skills';
+import ContactMe from '../homePage/layers/ContactMe';
+import ContactApes from '../homePage/layers/ContactApes';
+import ArrowLayer1 from '../homePage/layers/ArrowLayer1';
 
 
 const HomePages = () => {
@@ -44,70 +48,16 @@ const HomePages = () => {
     return (
         <>
             <Parallax pages={2.75} ref={ref}>
-                <ParallaxLayer
-                    factor={2.75}
-                    className='bg'
-                    id='mainBg'
-                >
-                    <div
-                        className='bg'
-                        id='mainBg'
-                    />
-                </ParallaxLayer>
-                <ParallaxLayer
-                    offset={calcParallaxVal(1.35)}
-                    speed={calcParallaxVal(0.56)}
-                    onClick={() => { ref.current.scrollTo(1.75) }}
-                >
-                    <ScrollDown />
-                </ParallaxLayer>
-                <ParallaxLayer
-                    sticky={{ start: calcParallaxVal(0.131), end: calcParallaxVal(0.5) }}
-                    style={{ height: '2rem' }}
-                >
-                    <MonkeyBox />
-                </ParallaxLayer>
-                <ParallaxLayer
-                    sticky={{ start: calcParallaxVal(0.42), end: calcParallaxVal(0.5) }}
-                    style={{ height: '2rem' }}
-                >
-                    <TextBox content='greeting' />
-                </ParallaxLayer>
-                <ParallaxLayer
-                    horizontal={true}
-                    offset={calcParallaxVal(0.5, true)}
-                    speed={0.75}
-                    style={{ height: '2rem' }}
-                >
-                    <SkillsBox />
-                </ParallaxLayer>
-                <ParallaxLayer
-                    offset={calcParallaxVal(1.85)}
-                    speed={0.2}
-                >
-                    <div id='contactSection'>
-                        <HeadingBox content='contact' />
-                        <TextBox content='contact' />
-                    </div>
-                </ParallaxLayer>
-                <ParallaxLayer
-                    offset={calcParallaxVal(2.3)}
-                    speed={0.15}
-                >
-                    <div id='bottomMonkeys'>
-                        <img src={bottomMonkey2} alt='Purple chimpanzee talking' height='350rem' />
-                        <img src={bottomMonkey1} alt='Purple chimpanzee thinking' height='350rem' />
-                    </div>
-                </ParallaxLayer>
-                <ParallaxLayer >
+                <BgLayer />
+                <ArrowLayer1 parentRef={ref} calc={calcParallaxVal} />
+                <ArrowLayer2 parentRef={ref} calc={calcParallaxVal} />
+                <MonkeySlider calc={calcParallaxVal} />
+                <AboutMe calc={calcParallaxVal} />
+                <Skills calc={calcParallaxVal} />
+                <ContactMe calc={calcParallaxVal} />
+                <ContactApes calc={calcParallaxVal} />
+                <ParallaxLayer style={{ height: '1rem' }}>
                     <NavBar currentPage='home' />
-                </ParallaxLayer>
-                <ParallaxLayer
-                    offset={calcParallaxVal(0.7)}
-                    speed={0.7}
-                    onClick={() => { ref.current.scrollTo(calcParallaxVal(0.67)) }}
-                >
-                    <ScrollDown />
                 </ParallaxLayer>
             </Parallax>
         </>

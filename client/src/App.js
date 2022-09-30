@@ -7,13 +7,13 @@ import BlogPage from './components/pages/BlogPage'
 
 function App() {
   return (
-    <div>
+    <>
       <Routes>
         <Route path='/' element={<HomePage />} />
         {/* <Route path='/projects' element={<ProjectsPage />} />
         <Route path='/follow-me' element={<BlogPage />} /> */}
       </Routes>
-    </div>
+    </>
   );
 }
 

@@ -22,6 +22,11 @@ body {}
     height: 275vh;
 }
 
+#mainBg {
+    background-image: url('./assets/img/dunes.png');
+    background-size: cover;
+}
+
 /* ---Background--- */
 
 /* ---Headings--- */
@@ -142,11 +147,6 @@ nav>a:hover {
 /* ---NavBar--- */
 
 /* ---HomePage--- */
-
-#mainBg {
-    background-image: url('./assets/img/dunes.png');
-    background-size: cover;
-}
 
 #monkeyBox {
     padding-top: 2rem;
