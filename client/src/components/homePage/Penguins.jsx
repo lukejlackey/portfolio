@@ -6,13 +6,13 @@ const Penguins = () => {
     return (
         <div id="penguins">
             <div id='penguin1'>
-                <img src={penguin} alt='Purple penguin' height='125rem' />
+                <img src={penguin} alt='Purple penguin' className='penguin' />
             </div>
             <div id='penguin2'>
-                <img src={penguin} alt='Purple penguin' height='125rem' />
+                <img src={penguin} alt='Purple penguin' className='penguin' />
             </div>
             <div className='sidePenguin'>
-                <img src={penguin} alt='Purple penguin' height='125rem' />
+                <img src={penguin} alt='Purple penguin' className='penguin' />
             </div>
         </div>
     )

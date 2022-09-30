@@ -4,33 +4,10 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-}
-
-/* ---Reset--- */
-
-/* ---Fonts--- */
-
-.bolded {
-    font-weight: 500;
-}
-
-p {
     font-family: 'Tomorrow', sans-serif;
 }
 
-strong {
-    color: rgb(239, 163, 0);
-}
-
-li {
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-}
-
-/* ---Fonts--- */
+/* ---Reset--- */
 
 /* ---Body--- */
 
@@ -38,16 +15,16 @@ body {}
 
 /* ---Body--- */
 
-/* ---Headings--- */
+/* ---Background--- */
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: 'Tomorrow', sans-serif;
+.bg {
+    width: 100vw;
+    height: 275vh;
 }
+
+/* ---Background--- */
+
+/* ---Headings--- */
 
 h1 {
     font-size: 4rem;
@@ -73,31 +50,49 @@ h4 {
 
 /* ---Headings--- */
 
-/* ---Background--- */
+/* ---Text--- */
 
-.bg {
-    width: 100vw;
-    height: 250vh;
+strong {
+    color: rgb(239, 163, 0);
 }
 
-/* ---Background--- */
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ---Text--- */
 
 /* ---Containers--- */
 
+.heading {
+    width: 50vw;
+    color: rgb(239, 163, 0);
+    border: .5rem solid rgba(41, 0, 72, 0.8);
+    background-color: rgba(66, 45, 0, 0.8);
+    box-shadow: 0 0 0 1rem rgba(66, 45, 0, 0.8);
+}
+
 .container {
-    width: 40rem;
-    height: 20rem;
-    text-align: center;
+    width: 75vw;
     color: rgb(198, 135, 0);
-    padding: 1rem;
     border: .5rem solid rgb(41, 0, 72);
     background-color: rgba(66, 45, 0, 0.8);
     box-shadow: 0 0 0 1rem rgba(66, 45, 0, 0.8);
+    font-size: 2rem;
+}
+
+.heading,
+.container {
+    text-align: center;
+    padding: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: auto;
-    font-size: 2rem;
 }
 
 .container a,
@@ -114,20 +109,6 @@ img {
 
 .container a:hover img {
     height: 9rem;
-}
-
-.heading {
-    width: 30rem;
-    text-align: center;
-    color: rgb(239, 163, 0);
-    padding: 1rem;
-    border: .5rem solid rgba(41, 0, 72, 0.8);
-    background-color: rgba(66, 45, 0, 0.8);
-    box-shadow: 0 0 0 1rem rgba(66, 45, 0, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
 }
 
 /* ---Containers--- */
@@ -160,7 +141,6 @@ nav>a:hover {
 
 /* ---NavBar--- */
 
-
 /* ---HomePage--- */
 
 #mainBg {
@@ -178,7 +158,7 @@ nav>a:hover {
 }
 
 #skillsBoxContainer {
-    margin-top: 65rem;
+    margin-top: 102vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -208,7 +188,7 @@ nav>a:hover {
 
 #skillList {
     display: flex;
-    width: 125rem;
+    width: 125vw;
 }
 
 #skillList>div {
@@ -233,6 +213,10 @@ nav>a:hover {
 
 #monkey3>* {
     height: 7.9rem;
+}
+
+.penguin {
+    width: 15rem;
 }
 
 #penguin1 {
@@ -285,20 +269,46 @@ nav>a:hover {
 /* ---HomePage--- */
 /* ---Media Queries--- */
 
-@media only screen and (max-width: 667px) {
+@media only screen and (max-width: 480px) {
 
-    :root {
-        font-size: 8px;
+    h1 {
+        font-size: 1.7rem;
+    }
+
+    nav>a {
+        font-size: 0.75rem;
+    }
+
+    .heading * {
+        font-size: 1.6rem;
+    }
+
+    #greetingBox {
+        font-size: 1.5rem;
+    }
+
+    #monkey3>* {
+        width: 10rem;
     }
 
 }
 
-@media only screen and (max-width: 1000px) and (min-width: 667px) {
+@media only screen and (min-width: 481px) and (max-width: 768px) {
 
     :root {
-        font-size: 8.5px;
+        font-size: 16px;
+    }
+
+    #greetingBox {
+        font-size: 2.85rem;
     }
 
 }
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {}
+
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {}
+
+@media only screen and (min-width: 1201px) {}
 
 /* ---Media Queries--- */

@@ -14,7 +14,7 @@ const NavBar = (props) => {
         <nav>
             <Link to='/projects'>projects</Link>
             {mainElements[currentPage]}
-            <Link to='/follow-me'>follow my journey</Link>
+            <Link to='/follow-me'>my journey</Link>
         </nav>
     )
 }

@@ -7,7 +7,7 @@ const MonkeyBox = () => {
         <div id='monkeyBox'>
             <HeadingBox content='greeting' />
             <div id='monkey3'>
-                <img src={monke3} alt='Purple monkey' />
+                <img src={monke3} alt='Purple monkey' height='125rem' />
             </div>
             <HeadingBox content='skills' />
         </div>
