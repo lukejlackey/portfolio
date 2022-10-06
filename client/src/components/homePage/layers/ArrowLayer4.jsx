@@ -1,22 +1,21 @@
 import React from 'react'
 import { ParallaxLayer } from '@react-spring/parallax';
-import ScrollDown from '../ScrollDown';
+import ScrollUp from '../ScrollUp';
 
-
-const ArrowLayer1 = (props) => {
+const ArrowLayer4 = (props) => {
 
     const { parentRef } = props
 
     return (
         <ParallaxLayer
-            offset={0.7}
-            speed={0.7}
-            style={{ zIndex: 1 }}
+            offset={1.95}
+            speed={0.2}
+            style={{ zIndex: 1, height: 'fit-content' }}
             onClick={() => { parentRef.current.scrollTo(0.67) }}
         >
-            <ScrollDown />
+            <ScrollUp />
         </ParallaxLayer>
     )
 }
 
-export default ArrowLayer1
+export default ArrowLayer4

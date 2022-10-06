@@ -2,17 +2,16 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Routes, Route } from "react-router-dom";
 import NavBar from '../NavBar';
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
-import bottomMonkey1 from '../../assets/img/monke2.png'
-import bottomMonkey2 from '../../assets/img/monke4.png'
-import ScrollDown from '../homePage/ScrollDown';
 import BgLayer from '../homePage/layers/BgLayer';
 import ArrowLayer2 from '../homePage/layers/ArrowLayer2';
-import MonkeySlider from '../homePage/layers/MonkeySlider';
+import ApeSlider from '../homePage/layers/ApeSlider';
 import AboutMe from '../homePage/layers/AboutMe';
 import Skills from '../homePage/layers/Skills';
 import ContactMe from '../homePage/layers/ContactMe';
 import ContactApes from '../homePage/layers/ContactApes';
 import ArrowLayer1 from '../homePage/layers/ArrowLayer1';
+import ArrowLayer3 from '../homePage/layers/ArrowLayer3';
+import ArrowLayer4 from '../homePage/layers/ArrowLayer4';
 
 
 const HomePages = () => {
@@ -38,25 +37,27 @@ const HomePages = () => {
         setWindowHeight(height)
     }
 
-    const calcParallaxVal = (val, x = false) => {
-        const newVal = val * (x ? width : height);
-        if (x) console.log({ newVal })
-        return newVal / 1000
-    }
-
 
     return (
         <>
             <Parallax pages={2.75} ref={ref}>
                 <BgLayer />
-                <ArrowLayer1 parentRef={ref} calc={calcParallaxVal} />
-                <ArrowLayer2 parentRef={ref} calc={calcParallaxVal} />
-                <MonkeySlider calc={calcParallaxVal} />
-                <AboutMe calc={calcParallaxVal} />
-                <Skills calc={calcParallaxVal} />
-                <ContactMe calc={calcParallaxVal} />
-                <ContactApes calc={calcParallaxVal} />
-                <ParallaxLayer style={{ height: '1rem' }}>
+                <ArrowLayer1 parentRef={ref} />
+                <ArrowLayer2 parentRef={ref} />
+                <ArrowLayer3 parentRef={ref} />
+                <ArrowLayer4 parentRef={ref} />
+                <ApeSlider
+                    sticky={{ start: 0.131, end: 0.5 }}
+                />
+                <AboutMe
+                    sticky={{ start: 0.42, end: 0.495 }}
+                />
+                <Skills />
+                <ContactMe />
+                <ContactApes />
+                <ParallaxLayer
+                    style={{ zIndex: 2, height: 'fit-content' }}
+                >
                     <NavBar currentPage='home' />
                 </ParallaxLayer>
             </Parallax>

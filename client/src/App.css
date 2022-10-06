@@ -152,7 +152,7 @@ nav>a:hover {
     padding-top: 2rem;
 }
 
-#greetingBox {
+#aboutBox {
     background-color: rgb(66, 45, 0);
     box-shadow: 0 0 0 1rem rgb(66, 45, 0);
 }
@@ -227,22 +227,28 @@ nav>a:hover {
     margin-left: 2rem;
 }
 
-#scrollDown {
-    font-size: larger;
-    color: rgb(41, 0, 72);
+.scrollDown {
     display: flex;
     justify-content: space-around;
     width: 75%;
     margin: auto;
 }
 
-#downArrow {
+.scrollUp {
+    display: flex;
+    justify-content: center;
+    gap: 35rem;
+    width: 90%;
+    margin: auto;
+}
+
+.Arrow {
     -webkit-animation: float 1s ease-in-out infinite alternate;
     -moz-animation: float 1s ease-in-out infinite alternate;
     animation: float 1s ease-in-out infinite alternate;
 }
 
-#downArrow:hover {
+.Arrow:hover {
     cursor: pointer;
 }
 
@@ -283,7 +289,7 @@ nav>a:hover {
         font-size: 1.6rem;
     }
 
-    #greetingBox {
+    #aboutBox {
         font-size: 1.5rem;
     }
 
@@ -299,7 +305,7 @@ nav>a:hover {
         font-size: 16px;
     }
 
-    #greetingBox {
+    #aboutBox {
         font-size: 2.85rem;
     }
 

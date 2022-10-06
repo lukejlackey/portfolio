@@ -2,16 +2,14 @@ import React from 'react'
 import { ParallaxLayer } from '@react-spring/parallax';
 import SkillsBox from '../SkillsBox';
 
-const Skills = (props) => {
-
-    const { calc } = props
+const Skills = () => {
 
     return (
         <ParallaxLayer
             horizontal={true}
-            offset={calc(0.5, true)}
+            offset={0.469}
             speed={0.75}
-            style={{ height: '2rem' }}
+            style={{ zIndex: 0, height: 'fit-content' }}
         >
             <SkillsBox />
         </ParallaxLayer>

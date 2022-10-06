@@ -3,16 +3,14 @@ import { ParallaxLayer } from '@react-spring/parallax';
 import TextBox from '../TextBox';
 
 
-const AboutMe = (props) => {
-
-    const { calc } = props
+const AboutMe = () => {
 
     return (
         <ParallaxLayer
-            sticky={{ start: calc(0.42), end: calc(0.5) }}
-            style={{ height: '2rem' }}
+            sticky={{ start: 0.42, end: 0.495 }}
+            style={{ zIndex: 2, height: 'fit-content' }}
         >
-            <TextBox content='greeting' />
+            <TextBox content='about' />
         </ParallaxLayer>
     )
 }

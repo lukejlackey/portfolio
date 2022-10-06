@@ -3,13 +3,11 @@ import { ParallaxLayer } from '@react-spring/parallax';
 import bottomMonkey1 from '../../../assets/img/monke2.png'
 import bottomMonkey2 from '../../../assets/img/monke4.png'
 
-const ContactApes = (props) => {
-
-    const { calc } = props
+const ContactApes = () => {
 
     return (
         <ParallaxLayer
-            offset={calc(2.3)}
+            offset={2.4}
             speed={0.15}
         >
             <div id='bottomMonkeys'>

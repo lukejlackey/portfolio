@@ -4,12 +4,12 @@ import ScrollDown from '../ScrollDown';
 
 const ArrowLayer2 = (props) => {
 
-    const { parentRef, calc } = props
+    const { parentRef } = props
 
     return (
         <ParallaxLayer
-            offset={calc(1.35)}
-            speed={calc(0.56)}
+            offset={1.35}
+            speed={0.56}
             onClick={() => { parentRef.current.scrollTo(1.75) }}
         >
             <ScrollDown />

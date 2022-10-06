@@ -7,7 +7,7 @@ const TextBox = (props) => {
     const { content } = props
 
     const textContent = {
-        greeting: <p>I am a <strong>Full Stack</strong> developer based in the <strong>San Diego</strong> area with experience building web applications in <strong>Python</strong>, <strong>Java</strong>, & <strong>JavaScript</strong>.</p>,
+        about: <p>I am a <strong>Full Stack</strong> developer based in the <strong>San Diego</strong> area with experience building web applications in <strong>Python</strong>, <strong>Java</strong>, & <strong>JavaScript</strong>.</p>,
         skills: <SkillList />,
         contact: <ContactInfo />
     }
