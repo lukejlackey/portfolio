@@ -6,12 +6,16 @@ const Skills = () => {
 
     return (
         <ParallaxLayer
-            horizontal={true}
-            offset={0.469}
-            speed={0.75}
-            style={{ zIndex: 0, height: 'fit-content' }}
+            offset={1.3}
         >
-            <SkillsBox />
+
+            <ParallaxLayer
+                horizontal={true}
+                offset={0.5}
+                speed={0.538}
+            >
+                <SkillsBox />
+            </ParallaxLayer>
         </ParallaxLayer>
     )
 }

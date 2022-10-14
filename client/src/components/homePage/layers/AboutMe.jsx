@@ -1,15 +1,15 @@
 import React from 'react'
 import { ParallaxLayer } from '@react-spring/parallax';
 import TextBox from '../TextBox';
+import NavBar from '../../NavBar';
+import ScrollDown from '../ScrollDown';
 
 
 const AboutMe = () => {
 
     return (
-        <ParallaxLayer
-            sticky={{ start: 0.42, end: 0.495 }}
-            style={{ zIndex: 2, height: 'fit-content' }}
-        >
+        <ParallaxLayer>
+            <NavBar currentPage='home' />
             <TextBox content='about' />
         </ParallaxLayer>
     )

@@ -11,7 +11,7 @@ const HeadingBox = (props) => {
     }
 
     return (
-        <div className='heading' id='greetingHeader'>
+        <div className={`heading h-${content}`} id='greetingHeader'>
             <h3>{textContent[content]}</h3>
         </div>
     )
